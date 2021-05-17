@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home';
 import { FooterComponent } from './components/footer';
 import { NavComponent } from './components/nav';
+import { NewsComponent } from './components/news';
 import { NotFoundComponent } from './components/notfound';
 
 import { EmailService } from './providers/email';
@@ -22,6 +23,7 @@ import { environment } from '../environments/environment';
     HomeComponent,
     FooterComponent,
     NavComponent,
+    NewsComponent,
     NotFoundComponent
   ],
   imports: [
