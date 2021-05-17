@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Munsy.io</title>
-    <base href="./">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script data-ad-client="ca-pub-6262622456677781" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </head>
-  <body>
-    <app-root>
-      <div class="spinner-grow" role="status">
-  	    <span class="visually-hidden">Loading...</span>
-  	  </div>
-    </app-root>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Munsy.io</title>
+  <script>
+    // Store the URL the user was trying to access when receiving the 404.
+    sessionStorage.redirect = location.href;
+  </script>
+  <!-- Immediately redirect to the base URL so we can use the SPA routing. -->
+  <meta http-equiv="refresh" content="0;URL='/'"></meta>
+</head>
+<body>
+<!-- IE required at least 512 bytes of data to show non-default 404. -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</body>
 </html>
