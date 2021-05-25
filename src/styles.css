@@ -10,5 +10,7 @@ html, body {
 }
 
 #planetstrife {
-	background-image: url('assets/images/earth-from-space.png');
+	background-image: url('assets/images/planet-gaia.png');
+	background-repeat: no-repeat;
+	background-position: center;
 }
