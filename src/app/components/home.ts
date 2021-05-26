@@ -13,7 +13,7 @@ import { EmailService } from '../providers/email';
         <img class="d-block mx-auto" src="assets/images/planetstrife-logo.png">
         <div class="carousel-caption d-none d-md-block">
           <p>A Real-Time Strategy game coming soon.</p>
-          <a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://munsy.io/planetstrife/"><i class="fab fa-steam"></i>&nbsp;Pre-Order On Steam</a>
+          <!--a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://munsy.io/planetstrife/"><i class="fab fa-steam"></i>&nbsp;Pre-Order On Steam</a-->
           <a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://planetstrife.munsy.io/">Learn More</a>
         </div>
       </div>
@@ -21,31 +21,30 @@ import { EmailService } from '../providers/email';
   </div>
 </div>
 <div class="bg-dark">&nbsp;</div>
-<div class="h-50">
-  <div class="container">
-    <div class="row pt-3">
+<div class="h-50 text-white">
+  <div class="container pt-5">
+    <div class="row">
       <div class="col text-center">
-        <h2 class="text-uppercase">explore and learn</h2>
+        <h2 class="text-uppercase">building worlds together</h2>
       </div>
     </div>
     <div class="row pt-5">
-      <div class="col text-center">
-        <h4 class="text-uppercase">
-          <i class="far fa-newspaper"></i>&nbsp;<br>latest news
-        </h4>
-        Find out what we've been up to recently!
-      </div>
-      <div class="col text-center">
-        <h4 class="text-uppercase">
-          <i class="fas fa-shopping-cart"></i>&nbsp;<br>shop
-        </h4>
-        See all of our merchandise.
-      </div>
-      <div class="col text-center">
-        <h4 class="text-uppercase">
-          <i class="fas fa-briefcase"></i>&nbsp;<br>careers
-        </h4>
-        Check out our job openings, or sign up for notifications when your dream job becomes available.
+      <div class="col">
+        <p>
+          Munsy.io was founded in 2019 by Tim Munson. Before turning to video game development, Tim earned his Bachelor of Science 
+          in Computer Science from Washington State University, and worked as a software developer in the finance industry. 
+          While he found finance to be extremely soul-sucking, he always looked forward to the weekends and evenings, when 
+          he could log on and play video games with his friends.
+        </p>
+        <p>
+          Through various popular games such as Starcraft, Warcraft, and Final Fantasy, Tim has met and become friends with people from
+          many different parts of the world. Several of these friendships have led to the establishment of different guilds and organizations, 
+          each with varying degrees of success. 
+        </p>
+        <p>
+          Now, through Munsy.io, he's taking the next step, and is using his passion for video games and software development as the fuel to 
+          construct new worlds, create fascinating characters, and tell awe-inspiring tales. We're excited to have you along for the ride!
+        </p>
       </div>
     </div>
   </div>
@@ -74,7 +73,7 @@ import { EmailService } from '../providers/email';
           </div>
           <div class="text-center pt-2">
             <small>
-              You can unsubscribe at any time by clicking the link in the footer of our emails. (View our Privacy Policy).
+              <em>You can unsubscribe at any time by clicking the link in the footer of our emails</em>.
             </small>
           </div>
           <div class="text-center pt-2">
@@ -84,19 +83,6 @@ import { EmailService } from '../providers/email';
     		<small class="d-inline" *ngIf="justSubbed">A confirmation email has been sent to {{ subEmail }}!</small>
       </div>
       <div class="col-3"></div>
-    </div>
-  </div>
-</div>
-<div class="h-25">
-  <div class="container">
-    <div class="row pt-5">
-      <div class="col text-center">
-        <img src="assets/images/munsyio.png" width="20%" height="75%" alt="Munsy.io" class="pb-3"><br>
-        <span class="text-white text-uppercase fine-print">
-          &copy; 2021 Munsy.io. All rights reserved.<br>
-          All trademarks referenced herein are the properties of their respective owners.
-        </span>
-      </div>
     </div>
   </div>
 </div>
@@ -125,17 +111,17 @@ import { EmailService } from '../providers/email';
   styleUrls: ['../app.component.css']
 })
 export class HomeComponent {
-  public subName: string;
-  public subEmail: string;
   public form: FormGroup;
+  public subEmail: string;
+  public justSubbed: boolean;
 
   constructor(private fb: FormBuilder, private es: EmailService) {
 
   }
 
   subToMailingList() {
-    this.es.SubToMailingList(this.subName, this.subEmail).subscribe(() => {
-      // redirect user to another page
+    this.es.SubToMailingList(this.subEmail).subscribe(() => {
+      this.justSubbed = true;
     }, error => {
       // handle
     });
