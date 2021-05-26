@@ -1,18 +1,3 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { HomeComponent } from './components/home';
-import { NewsComponent } from './components/news';
-import { NotFoundComponent } from './components/notfound';
-
-const routes: Routes = [
-  { path: 'news', component: NewsComponent },
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent }
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ce28af0db745b683ee70c002a3d6277d19e9cf88310d19b7994838fc8def926
+size 600
