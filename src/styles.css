@@ -10,11 +10,7 @@ html, body {
 }
 
 #planetstrife {
-/*
-	background-image: url('assets/images/gaia-mid-range.gif');
-	background-image: url('https://github.com/munsy/munsy.github.io/blob/live/docs/assets/images/gaia-mid-range.gif');
-*/
-	background-image: url('https://munsyio.s3-us-west-2.amazonaws.com/gaia-mid-range.gif');
+	background-image: url('https://munsyio.s3-us-west-2.amazonaws.com/gaia-orbit.gif');
 	background-repeat: no-repeat;
 	background-position: center;
 }
