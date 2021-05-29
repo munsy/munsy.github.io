@@ -10,7 +10,17 @@ html, body {
 }
 
 #planetstrife {
+/*
 	background-image: url('https://munsyio.s3-us-west-2.amazonaws.com/gaia-orbit.gif');
 	background-repeat: no-repeat;
 	background-position: center;
+*/
+}
+
+.munsy-video {
+	z-index: -1;
+}
+
+.munsy-overlay {
+	z-index: 0;
 }

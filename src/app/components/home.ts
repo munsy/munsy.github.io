@@ -7,8 +7,8 @@ import { EmailService } from '../providers/email';
   selector: 'home',
   template: `
 <div class="h-75" id="planetstrife">
-  <div id="carousel-munsy-slide" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
+  <div id="carousel-munsy-slide" class="carousel slide munsy-overlay" data-ride="carousel">
+    <div class="carousel-inner position-absolute">
       <div class="carousel-item active">
         <img class="d-block mx-auto" src="assets/images/planetstrife-logo.png">
         <div class="carousel-caption d-none d-md-block">
@@ -18,9 +18,12 @@ import { EmailService } from '../providers/email';
         </div>
       </div>
     </div>
+    <video class="position-relative munsy-video" autoplay playsinline loop muted>
+      <source class="mp4 desktop" src="https://munsyio.s3-us-west-2.amazonaws.com/gaia-orbit.mp4" type="video/mp4">
+    </video>
   </div>
 </div>
-<div class="bg-dark">&nbsp;</div>
+<div class="bg-dark position-absolute w-100 munsy-dark-border">&nbsp;</div>
 <div class="h-50 text-white">
   <div class="container pt-5">
     <div class="row">
