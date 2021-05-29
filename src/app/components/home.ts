@@ -10,16 +10,17 @@ import { EmailService } from '../providers/email';
   <div id="carousel-munsy-slide" class="carousel slide munsy-overlay" data-ride="carousel">
     <div class="carousel-inner position-absolute">
       <div class="carousel-item active">
-        <img class="d-block mx-auto" src="assets/images/planetstrife-logo.png">
         <div class="carousel-caption d-none d-md-block">
+          <img class="d-block mx-auto" src="assets/images/planetstrife-logo.png">
           <p>A Real-Time Strategy game coming soon.</p>
           <!--a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://munsy.io/planetstrife/"><i class="fab fa-steam"></i>&nbsp;Pre-Order On Steam</a-->
           <a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://planetstrife.munsy.io/">Learn More</a>
         </div>
       </div>
     </div>
-    <video class="position-relative munsy-video" autoplay playsinline loop muted>
-      <source class="mp4 desktop" src="https://munsyio.s3-us-west-2.amazonaws.com/gaia-orbit.mp4" type="video/mp4">
+    <video class="position-relative" [muted]="true" [autoplay]="true" [loop]="true">
+      <source src="https://munsyio.s3-us-west-2.amazonaws.com/gaia-orbit.mp4" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
     </video>
   </div>
 </div>
