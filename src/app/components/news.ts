@@ -1,5 +1,7 @@
 import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { NewsService, NewsPost } from '../providers/news';
 
 @Component({
   selector: 'munsy-news',
@@ -15,7 +17,7 @@ import { Component } from '@angular/core';
       <img src="assets/images/munsylogo.svg" width="100%" height="100%">
     </div>
     <div class="col">
-      <h4>story title #{{ i + 1 }}</h4>
+      <h4>{{ article.name }}</h4>
       <div class="row">
         <div class="col">
           <p>
@@ -29,10 +31,18 @@ import { Component } from '@angular/core';
 `,
   styleUrls: ['../app.component.css']
 })
-export class NewsComponent {
-    public articles: Array<string>;
+export class NewsComponent implements OnInit {
+    public articles: Array<NewsPost>;
 
-    constructor() {
-      this.articles = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
+    constructor(private ns: NewsService) {
+      this.articles = []
+    }
+
+    ngOnInit() {
+      this.ns.GetPosts().subscribe((resp: Array<NewsPost>) => {
+        this.articles = resp;
+        console.log(resp);
+        console.log(this.articles);
+      });
     }
 }

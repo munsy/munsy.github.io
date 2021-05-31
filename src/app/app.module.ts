@@ -14,6 +14,7 @@ import { NewsComponent } from './components/news';
 import { NotFoundComponent } from './components/notfound';
 
 import { EmailService } from './providers/email';
+import { NewsService } from './providers/news';
 
 import { environment } from '../environments/environment';
 
@@ -35,7 +36,10 @@ import { environment } from '../environments/environment';
     HttpClientModule, 
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [EmailService],
+  providers: [
+    EmailService,
+    NewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
