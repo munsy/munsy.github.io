@@ -39,7 +39,28 @@ export class NewsComponent implements OnInit {
     }
 
     ngOnInit() {
-      this.ns.GetPosts().subscribe((resp: Array<NewsPost>) => {
+      let date = new Date();
+      let month = date.getUTCMonth() + 1;
+      let day = date.getUTCDate();
+      let year = date.getUTCFullYear();
+
+
+
+      this.ns.GetYears().subscribe((years: Array<NewsPosts>) => {
+        for(var i = 0; i < years.length; i++){
+          this.ns.GetMonths(years[i].name).subscribe((months: Array<NewsPost>) => {
+            for(var j = 0; i < years.length; i++){
+            this.ns.GetPosts(year[i].name, month[].name, day[].name).subscribe((posts: Array<NewsPost>) => {
+              for(var k = 0; i < years.length; i++){
+                this.ns.GetPost(year[i].name, month[].name, day[].name, posts[].name).subscribe((post: NewsPost) => {
+                  
+                });
+            });
+          });
+        }
+      })
+
+      this.ns.GetPosts(year, month, day).subscribe((resp: Array<NewsPost>) => {
         this.articles = resp;
         console.log(resp);
         console.log(this.articles);
