@@ -21,7 +21,7 @@ import { NewsService, NewsPost } from '../providers/news';
       <div class="row">
         <div class="col">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            {{ article.content }}
           </p>
         </div>
       </div>
@@ -39,31 +39,32 @@ export class NewsComponent implements OnInit {
     }
 
     ngOnInit() {
-      let date = new Date();
-      let month = date.getUTCMonth() + 1;
-      let day = date.getUTCDate();
-      let year = date.getUTCFullYear();
-
-
-
       this.ns.GetYears().subscribe((years: Array<NewsPosts>) => {
-        for(var i = 0; i < years.length; i++){
+        for(var i = 0; i < years.length && this.articles.length < 10; i++){
           this.ns.GetMonths(years[i].name).subscribe((months: Array<NewsPost>) => {
-            for(var j = 0; i < years.length; i++){
-            this.ns.GetPosts(year[i].name, month[].name, day[].name).subscribe((posts: Array<NewsPost>) => {
-              for(var k = 0; i < years.length; i++){
-                this.ns.GetPost(year[i].name, month[].name, day[].name, posts[].name).subscribe((post: NewsPost) => {
-                  
-                });
-            });
+            for(var j = 0; j < months.length && this.articles.length < 10; j++){
+              this.ns.GetDays(year[i].name, month[j].name).subscribe((days: Array<NewsPost>) => {
+                for(var k = 0; k < days.length && this.articles.length < 10; k++){
+                  this.ns.GetPosts(year[i].name, month[j].name, days[k].name).subscribe((posts: Array<NewsPost>) => {
+                    for(var l = 0; l < posts.length && this.articles.length < 10; l++){
+                      this.ns.GetPost(year[i].name, month[j].name, days[k].name, posts[l].name).subscribe((post: NewsPost) => {
+                        post.content = post.content.replace("\n", "");
+                        post.content = Buffer.from(post.content, 'base64').toString('binary');
+                        this.articles.push(post);
+                      });
+                    }
+                  });
+                }
+              });
+            }
           });
         }
-      })
-
-      this.ns.GetPosts(year, month, day).subscribe((resp: Array<NewsPost>) => {
-        this.articles = resp;
-        console.log(resp);
-        console.log(this.articles);
       });
+
+      // this.ns.GetPosts(year, month, day).subscribe((resp: Array<NewsPost>) => {
+      //   this.articles = resp;
+      //   console.log(resp);
+      //   console.log(this.articles);
+      // });
     }
 }

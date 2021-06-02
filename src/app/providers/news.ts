@@ -29,19 +29,19 @@ export class NewsService {
 		return this.http.get(`${ENDPOINT_NEWS_POSTS}?ref=master`);
 	}
 	
-    public GetMonths(year: number) {
+    public GetMonths(year: string) {
     	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}?ref=master`);
     }
 
-    public GetDays(year, month: number) {
+    public GetDays(year, month: string) {
     	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}?ref=master`);
     }
 
-    public GetPosts(year, month, day: number) {
+    public GetPosts(year, month, day: string) {
     	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}/${day}?ref=master`);
     }
 
-    public GetPost(year, month, day, postid: number) {
-    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}/${day}/${postid}?ref=master`);
+    public GetPost(year, month, day, postid: string) {
+    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}/${day}/${postid}.md?ref=master`);
     }
 }
