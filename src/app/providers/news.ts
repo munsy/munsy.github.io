@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
-const ENDPOINT_NEWS_POSTS = `https://api.github.com/repos/munsy/munsy.github.io/contents/news`; 
+const ENDPOINT_NEWS_POSTS = `https://api.github.com/repos/munsy/munsy.github.io/contents`; 
 
 export class NewsPost {
 	public name: string; 
@@ -26,22 +26,27 @@ export class NewsService {
 	}
 
 	public GetYears() {
-		return this.http.get(`${ENDPOINT_NEWS_POSTS}?ref=master`);
+		console.log(`${ENDPOINT_NEWS_POSTS}/news?ref=master`);
+		return this.http.get(`${ENDPOINT_NEWS_POSTS}/news?ref=master`);
 	}
 	
     public GetMonths(year: string) {
+    	console.log(`${ENDPOINT_NEWS_POSTS}/${year}?ref=master`);
     	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}?ref=master`);
     }
 
-    public GetDays(year, month: string) {
-    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}?ref=master`);
+    public GetDays(month: string) {
+    	console.log(`${ENDPOINT_NEWS_POSTS}/${month}?ref=master`);
+    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${month}?ref=master`);
     }
 
-    public GetPosts(year, month, day: string) {
-    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}/${day}?ref=master`);
+    public GetPosts(day: string) {
+    	console.log(`${ENDPOINT_NEWS_POSTS}/${day}?ref=master`);
+    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${day}?ref=master`);
     }
 
-    public GetPost(year, month, day, postid: string) {
-    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}/${month}/${day}/${postid}.md?ref=master`);
+    public GetPost(postid: string) {
+    	console.log(`${ENDPOINT_NEWS_POSTS}/${postid}?ref=master`);
+    	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${postid}?ref=master`);
     }
 }

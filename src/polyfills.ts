@@ -61,3 +61,8 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+import "showdown/dist/showdown.js";
+
+(window as any).global = window;
+global.Buffer = global.Buffer || require('buffer').Buffer;
