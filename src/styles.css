@@ -5,8 +5,17 @@ html, body {
 	background-color: #000000;
 }
 
+div {
+	color: #FFFFFF;
+}
+
 .fine-print {
 	font-size: x-small;
+}
+
+.article-summary {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 #planetstrife {

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 <munsy-nav></munsy-nav>
 <router-outlet></router-outlet>
 <munsy-footer></munsy-footer>
+<munsy-cookies></munsy-cookies>
 `,
   styleUrls: ['./app.component.css']
 })

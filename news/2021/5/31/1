@@ -1,5 +1,13 @@
-Post Title
-==========
+---
+postid: 1
+toc: false
+title: Text truncation
+teaser-image: https://munsy.io/assets/images/munsylogo.svg
+description: This is a preview of the news post. We want to include useful information here. Truncate long strings of text with an ellipsis.
+date: 6/3/2021
+---
+
+# Post Title
 ![alt text](https://munsy.io/assets/images/munsylogo.svg)
 
 some preview text following the title and photo

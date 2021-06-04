@@ -64,5 +64,12 @@ import 'zone.js';  // Included with Angular CLI.
 
 import "showdown/dist/showdown.js";
 
+
+import * as bootstrap from 'bootstrap';
+import * as $ from 'jquery';
+
+//declare var $: any;
+
+
 (window as any).global = window;
 global.Buffer = global.Buffer || require('buffer').Buffer;
