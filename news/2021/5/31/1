@@ -1,25 +1,20 @@
 ---
 postid: 1
 toc: false
-title: Text truncation
+title: Testing
 teaser-image: https://munsy.io/assets/images/munsylogo.svg
 description: This is a preview of the news post. We want to include useful information here. Truncate long strings of text with an ellipsis.
 date: 6/3/2021
 ---
 
-# Post Title
-![alt text](https://munsy.io/assets/images/munsylogo.svg)
-
-some preview text following the title and photo
-
-# Section One
+## Header 2 text
 *Some bold text*
 _Some italic text_
 ~~this is strikethrough text~~
+
 > Some quoted text, and 
 > a continuation of the quote.
 
-## Subsection 1.1
 here's an unordered list:
 * Item 1
 * Item 2
@@ -51,7 +46,7 @@ Alternatively,
   - Like this
   - And this
 
-### Sub-Subsection 1.1.1
+### Header 3 text
 another cool thing are task lists:
 
 - [x] This is a complete item
