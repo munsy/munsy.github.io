@@ -15,6 +15,7 @@ import { CookiesComponent } from './components/cookies';
 import { HomeComponent } from './components/home';
 import { FooterComponent } from './components/footer';
 import { NavComponent } from './components/nav';
+import { AboutComponent } from './components/about';
 import { NewsComponent } from './components/news/news';
 import { RecentNewsComponent } from './components/news/recent';
 import { YearNewsComponent } from './components/news/year';
@@ -32,6 +33,7 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
     CookiesComponent,
     HomeComponent,
     FooterComponent,

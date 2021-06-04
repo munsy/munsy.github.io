@@ -8,7 +8,7 @@ import { NewsService, NewsPost } from '../../providers/news';
   selector: 'munsy-news-post',
   template: `
 <div class="container">
-  <ng-container *ngIf="loading">
+  <ng-container *ngIf="loading()">
     <div class="row py-4">
       <div class="col text-center py-2">
         <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
@@ -17,13 +17,20 @@ import { NewsService, NewsPost } from '../../providers/news';
       </div>
     </div>
   </ng-container>
-  <ng-container *ngIf="!loading">
+  <ng-container *ngIf="!loading()">
+    <div class="row pt-5">
+      <div class="col-1"></div>
+      <div class="col pb-5 text-center border-bottom border-white">
+        <h1>{{ post.title }}</h1>
+      </div>
+      <div class="col-1"></div>
+    </div>
     <div class="row pt-5">
       <div class="col text-center">
-        <h2>{{ post.title }}</h2>
+        <img class="mw-75 mh-75" width="75%" height="75%" [attr.src]="post.teaser_image">
       </div>
     </div>
-    <div class="row py-4 mh-25">
+    <div class="row py-4 border-bottom border-white">
       <div class="col text-cen" [innerHtml]="post.html">
         
       </div>
@@ -37,13 +44,14 @@ export class NewsPostComponent implements OnInit {
   public day: string;
   public postid: string;
   public post: NewsPost;
-  public loading: boolean;
 
-  constructor(private ns: NewsService, private route: ActivatedRoute) {
+  public loading(): boolean {
+    return this.post == null || this.post == undefined; 
   }
 
+  constructor(private ns: NewsService, private route: ActivatedRoute) {}
+
   ngOnInit() {
-    this.loading = true;
     this.year = this.route.snapshot.paramMap.get('year');
     this.month = this.route.snapshot.paramMap.get('month');
     this.day = this.route.snapshot.paramMap.get('day');
@@ -51,8 +59,6 @@ export class NewsPostComponent implements OnInit {
 
     this.ns.GetPost(`news/${this.year}/${this.month}/${this.day}/${this.postid}`).subscribe((post: NewsPost) => {
       this.post = this.ns.ParseHeader(post);
-      console.log(this.post);
     });
-    this.loading = false;
   }
 }

@@ -138,7 +138,8 @@ export class NewsService {
             }
           }
         }
-        post.markdown = postHeader[1];
+        console.log(postHeader);
+        post.markdown = postHeader[2];
         post.html = converter.makeHtml(post.markdown);
         return post;
     }
