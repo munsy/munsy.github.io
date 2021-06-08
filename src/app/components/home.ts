@@ -14,7 +14,7 @@ import { EmailService } from '../providers/email';
           <img class="d-block mx-auto" src="assets/images/planetstrife-logo.png">
           <p>A Real-Time Strategy game coming soon.</p>
           <!--a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://munsy.io/planetstrife/"><i class="fab fa-steam"></i>&nbsp;Pre-Order On Steam</a-->
-          <a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://planetstrife.munsy.io/">Learn More</a>
+          <a class="btn btn-lg btn-secondary rounded-0 mx-3 px-3 text-uppercase" href="https://munsy.io/games/planetstrife">Learn More</a>
         </div>
       </div>
     </div>

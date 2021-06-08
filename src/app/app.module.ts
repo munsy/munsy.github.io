@@ -16,12 +16,16 @@ import { HomeComponent } from './components/home';
 import { FooterComponent } from './components/footer';
 import { NavComponent } from './components/nav';
 import { AboutComponent } from './components/about';
+import { GamesComponent } from './components/games/games';
+import { GamesListComponent } from './components/games/list';
+import { PlanetstrifeGamesComponent } from './components/games/planetstrife';
 import { NewsComponent } from './components/news/news';
 import { RecentNewsComponent } from './components/news/recent';
 import { YearNewsComponent } from './components/news/year';
 import { MonthNewsComponent } from './components/news/month';
 import { DayNewsComponent } from './components/news/day';
 import { NewsPostComponent } from './components/news/post';
+import { PressKitComponent } from './components/presskit';
 import { NotFoundComponent } from './components/notfound';
 
 import { BrowserStorageService } from './providers/storage';
@@ -34,6 +38,9 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     AboutComponent,
+    GamesComponent,
+    GamesListComponent,
+    PlanetstrifeGamesComponent,
     CookiesComponent,
     HomeComponent,
     FooterComponent,
@@ -44,6 +51,7 @@ import { environment } from '../environments/environment';
     MonthNewsComponent,
     DayNewsComponent,
     RecentNewsComponent,
+    PressKitComponent,
     NotFoundComponent
   ],
   imports: [
