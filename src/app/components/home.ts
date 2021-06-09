@@ -27,6 +27,11 @@ import { EmailService } from '../providers/email';
 <div class="bg-dark position-absolute w-100 munsy-dark-border">&nbsp;</div>
 <div class="h-50 text-white">
   <div class="container pt-5">
+    <munsy-news max-posts-count="3"></munsy-news>
+  </div>
+</div>
+<div class="h-50 bg-dark text-white">
+  <div class="container pt-5">
     <div class="row">
       <div class="col text-center">
         <h2 class="text-uppercase">building worlds together</h2>

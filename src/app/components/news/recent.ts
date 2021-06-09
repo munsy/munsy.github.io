@@ -55,7 +55,7 @@ export class RecentNewsComponent implements OnInit {
     }
 
     ngOnInit() {
-      const MAX_POSTS_LENGTH = 1;
+      const MAX_POSTS_LENGTH = 10;
       if(this.ns.articles.length >= MAX_POSTS_LENGTH) {
         this.loading = false;
         return;

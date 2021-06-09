@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 
 const showdown = require('showdown');
 
-const ENDPOINT_NEWS_POSTS = `https://api.github.com/repos/munsy/munsy.github.io/contents`; 
+const ENDPOINT_NEWS_CONTENTS = `https://api.github.com/repos/munsy/munsy.github.io/contents`;
 
 export class NewsPost {
     public postid: string;
@@ -46,43 +46,47 @@ export class NewsService {
 	}
 
 	public GetYears() {
+    const ENDPOINT_GET_YEARS = `${ENDPOINT_NEWS_CONTENTS}/news?ref=master`;
     if(!environment.production){
-        console.log(`${ENDPOINT_NEWS_POSTS}/news?ref=master`);
+      console.log(ENDPOINT_GET_YEARS)
     }
-		return this.http.get(`${ENDPOINT_NEWS_POSTS}/news?ref=master`);
+		return this.http.get(ENDPOINT_GET_YEARS);
 	}
 	
   public GetMonths(year: string) {
+    const ENDPOINT_GET_MONTHS = `${ENDPOINT_NEWS_CONTENTS}/${year}?ref=master`;
     if(!environment.production){
-        console.log(`${ENDPOINT_NEWS_POSTS}/${year}?ref=master`);
+      console.log(ENDPOINT_GET_MONTHS)
     }
-  	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${year}?ref=master`);
+    return this.http.get(ENDPOINT_GET_MONTHS);
   }
 
   public GetDays(month: string) {
+    const ENDPOINT_GET_DAYS = `${ENDPOINT_NEWS_CONTENTS}/${month}?ref=master`;
     if(!environment.production){
-        console.log(`${ENDPOINT_NEWS_POSTS}/${month}?ref=master`);
+      console.log(ENDPOINT_GET_DAYS)
     }
-  	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${month}?ref=master`);
+    return this.http.get(ENDPOINT_GET_DAYS);
   }
 
   public GetPosts(day: string) {
+    const ENDPOINT_GET_POSTS = `${ENDPOINT_NEWS_CONTENTS}/${day}?ref=master`;
     if(!environment.production){
-        console.log(`${ENDPOINT_NEWS_POSTS}/${day}?ref=master`);
+      console.log(ENDPOINT_GET_POSTS)
     }
-  	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${day}?ref=master`);
+    return this.http.get(ENDPOINT_GET_POSTS);
   }
 
   public GetPost(postid: string) {
+    const ENDPOINT_GET_POST = `${ENDPOINT_NEWS_CONTENTS}/${postid}?ref=master`;
     if(!environment.production){
-        console.log(`${ENDPOINT_NEWS_POSTS}/${postid}?ref=master`);
+      console.log(ENDPOINT_GET_POST)
     }
-  	return this.http.get(`${ENDPOINT_NEWS_POSTS}/${postid}?ref=master`);
+    return this.http.get(ENDPOINT_GET_POST);
   }
 
   public ParseHeader(post: NewsPost): NewsPost {
     if(post == null) {
-      console.log("null post...");
       return null;
     }
     const classMap = {
@@ -106,14 +110,9 @@ export class NewsService {
     let postHeader = post.markdown.split("---\n");
 
     if(postHeader.length < 2) {
-      console.log("bad header parse: " + post.markdown);
       return null;
     }
     let postHeaderTokens = postHeader[1].split("\n");
-    if(postHeaderTokens.length < 6) {
-      console.log(`couldn't parse newlines from post header: ${postHeader[0]}`);
-      console.log(`length ${postHeaderTokens.length}`);
-    }
     for(var a = 0; a < postHeaderTokens.length; a++) {
       let postHeaderToken = postHeaderTokens[a].split(": ", 2);
       switch(postHeaderToken[0]) {
@@ -146,7 +145,7 @@ export class NewsService {
           break;
         }
         case "": {
-          continue;
+          break;
         }
         default: {
           console.log("unknown token key: " + postHeaderToken[0]);
@@ -154,7 +153,6 @@ export class NewsService {
         }
       }
     }
-    console.log(postHeader);
     post.markdown = postHeader[2];
     post.html = converter.makeHtml(post.markdown);
     return post;
