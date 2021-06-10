@@ -25,8 +25,8 @@ import { EmailService } from '../providers/email';
   </div>
 </div>
 <div class="bg-dark position-absolute w-100 munsy-dark-border">&nbsp;</div>
-<div class="h-50 text-white">
-  <div class="container pt-5">
+<div class="py-5 text-white">
+  <div class="container">
     <munsy-news max-posts-count="3"></munsy-news>
   </div>
 </div>

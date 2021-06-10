@@ -9,6 +9,10 @@ div {
 	color: #FFFFFF;
 }
 
+.bg-black {
+	background-color: #000000;
+}
+
 .fine-print {
 	font-size: x-small;
 }
