@@ -13,17 +13,29 @@ const showdown = require('showdown');
   		<div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
         	<span class="visually-hidden">&nbsp;</span>
         </div>
+        <h6 class="text-uppercase">loading...</h6>
     </div>
     <div class="d-inline" *ngIf="!loading">
 	  	<h2 class="text-center text-uppercase">recent news</h2>
 	  	<div class="d-flex justify-content-center">
 	  		<div *ngIf="error">An error occurred.</div>
-	  		<div class="card p-2 m-2 border border-white rounded bg-black" *ngFor="let post of posts.reverse(); index as i">
-	  			<img [attr.src]="post.teaser_image" class="card-img-top" alt="...">
-  				<div class="card-body">
-  					<h5 class="card-title text-uppercase">{{ post.title }}</h5>
-  					<p class="card-text article-summary">{{ post.description }}</p>
-  					<a href="['/', 'news', post.year, post.month, post.day, post.postid]" class="btn btn-dark text-uppercase">read more</a>
+	  		<div class="card w-50 m-3 border border-dark rounded bg-black" *ngFor="let post of posts.reverse(); index as i">
+	  			<div class="bg-dark">
+	  				<img [attr.src]="post.teaser_image" class="card-img-top" alt="...">
+  				</div>
+  				<div class="card-body pt-3">
+  					<h5 class="card-title text-uppercase">
+  						{{ post.title }}
+  					</h5>
+  					<p class="article-summary">
+  						{{ post.description }}
+  					</p>
+  					<a [routerLink]="['/', 'news', post.year, post.month, post.day, post.postid]" class="btn btn-dark text-uppercase rounded-0">
+  						read more
+  					</a>
+  					<span class="float-right pt-2">
+  						{{ post.date }}
+  					</span>
   				</div>
 	  		</div>
 	  	</div>

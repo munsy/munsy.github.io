@@ -18,27 +18,10 @@ div {
 }
 
 .article-summary {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
-
-#planetstrife {
-/*
-	background-image: url('https://munsyio.s3-us-west-2.amazonaws.com/gaia-orbit.gif');
-	background-repeat: no-repeat;
-	background-position: center;
-*/
-}
-
-/*
-.munsy-video {
-	z-index: -1;
-}
-
-.munsy-overlay {
-	z-index: 0;
-}
-*/

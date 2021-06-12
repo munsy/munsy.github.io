@@ -43,15 +43,38 @@ const showdown = require('showdown');
 </div>`,
 })
 export class RecentNewsComponent implements OnInit {
-    //public articles: Array<NewsPost>;
     public loading: boolean;
 
-    constructor(private ns: NewsService) {
-
-    }
+    constructor(private ns: NewsService) {}
 
     public articles(): Array<NewsPost> {
-      return this.ns.articles;
+      return this.ns.articles.sort((a, b: NewsPost) => {
+        if(+a.year > +b.year) {
+          return 1;
+        }
+        if(+a.year < +b.year) {
+          return -1;
+        }
+        if(+a.month > +b.month) {
+          return 1;
+        }
+        if(+a.month < +b.month) {
+          return -1;
+        }
+        if(+a.day > +b.day) {
+          return 1;
+        }
+        if(+a.day < +b.day) {
+          return -1;
+        }
+        if(+a.postid > +b.postid) {
+          return 1;
+        }
+        if(+a.postid < +b.postid) {
+          return -1;
+        }
+        return 0;
+      }).reverse();
     }
 
     ngOnInit() {
@@ -112,6 +135,7 @@ export class RecentNewsComponent implements OnInit {
             }
           });
         }
+        this.loading = false;
       });
     }
 }
