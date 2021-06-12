@@ -1,64 +1,24 @@
 ---
 postid: 1
 toc: false
-title: Testing
+title: Announcing new game development studio Munsy.io!
 teaser-image: https://munsy.io/assets/images/munsylogo.svg
-description: This is a preview of the news post. We want to include useful information here. Truncate long strings of text with an ellipsis.
+description: Former Epic and Blizzard veterans join forces to create Lightforge Games.
 date: 5/31/2021
 ---
 
-## Header 2 text
-*Some bold text*
-_Some italic text_
-~~this is strikethrough text~~
+New Studio Seeks to Reimagine How RPGs are Played
 
-> Some quoted text, and 
-> a continuation of the quote.
+Longtime Epic Games and Blizzard Entertainment developers have united to create Lightforge Games, and they’re on a quest to change how RPGs are played. The team is developing a new cross-platform, social video game where players have the power to create worlds and tell stories with unprecedented freedom.
 
-here's an unordered list:
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+"We all love highly social, creative games, and we particularly love games where players drive the narrative," CEO Matt Schembari said. "We are looking to combine elements from Minecraft or Roblox with tabletop RPGs to form a new way to play roleplaying games. Given our backgrounds, making a game that looks to revolutionize RPGs was an obvious choice."
 
-here's an ordered list:
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+Lightforge recently raised $5 million with investments from Galaxy Interactive, NetEase Games, Dreamhaven, Maveron, 1UP Ventures, and angel investors from the gaming and tech industries.
 
-Sometimes you want numbered lists:
+“Lightforge is creating a game in a new space that has a ton of potential,” said Dreamhaven CEO Mike Morhaime. “The team is full of veteran developers, and I’m excited about their vision.”
 
-1. One
-2. Two
-3. Three
+The new studio was founded by industry veterans Matt Schembari, Dan Hertzka, Nathan Fairbanks, Glenn Rane, and Marc Hutcheson and has since expanded to include another six highly experienced developers.  The team brings decades of experience from Epic, Blizzard, Riot, Bioware, and Zenimax Online and have shipped top games such as Fortnite, World of Warcraft, Diablo 3, Star Wars: The Old Republic, Hearthstone, the StarCraft 2 trilogy, Overwatch, Elder Scrolls Online, and more.
 
-Sometimes you want bullet points:
+Lightforge is an all-remote studio where employees can work and live nearly anywhere. “We're building a studio for the long-haul where empathy for players and developers alike is at the core of everything we do. Building a fully remote company allows each team member to live wherever is best for their life situation,” Matt added.
 
-* Start a line with a star
-* Profit!
-
-Alternatively,
-
-- Dashes work just as well
-- And if you have sub points, put two spaces before the dash or star:
-  - Like this
-  - And this
-
-### Header 3 text
-another cool thing are task lists:
-
-- [x] This is a complete item
-- [ ] This is an incomplete item
-
-# Section Two
-[this is a link](https://munsy.io)
-
-```go
-func myCodeBlock() string {
-	return "this is a code block example"
-}
-```
-
-here's the start of a sentence, and `this is inline code` and some normal text after it
+Lightforge Games seeks candidates from all walks of life. Learn more at www.lightforge.gg and follow Lightforge on Twitter @LightforgeGames.
