@@ -1,16 +1,12 @@
-import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  template: `
-<munsy-nav></munsy-nav>
-<router-outlet></router-outlet>
-<munsy-footer></munsy-footer>
-<munsy-cookies></munsy-cookies>
-`,
-  styleUrls: ['./app.component.css']
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-
+  title = 'munsy.github.io';
 }
