@@ -9,8 +9,8 @@ import type { Game, NewsItem } from './models';
 export class DataService {
   private _games = signal<Game[]>([
     {
-      id: 'rift-blade',
-      title: 'Rift Blade',
+      id: 'the-play',
+      title: 'The Play',
       tagline: 'Slash between dimensions.',
       description: 'Rift Blade is a 2.5D action roguelite that blends crisp melee with portal mechanics. Fight, craft, and tear open rifts to new arenas.',
       image: '',
@@ -18,8 +18,17 @@ export class DataService {
       tags: ['action', 'roguelite']
     },
     {
-      id: 'neon-cartel',
-      title: 'Neon Cartel',
+      id: 'deck-and-dagger',
+      title: 'Deck and Dagger',
+      tagline: 'High-speed heists, neon streets.',
+      description: 'Neon Cartel is a stylized top-down racer/stealth hybrid where you assemble your crew and pull off synth-laced heists.',
+      image: '',
+      release: '2024-11-15',
+      tags: ['racing', 'stealth']
+    },
+    {
+      id: 'odyssey-of-eons',
+      title: 'Odyssey of Eons',
       tagline: 'High-speed heists, neon streets.',
       description: 'Neon Cartel is a stylized top-down racer/stealth hybrid where you assemble your crew and pull off synth-laced heists.',
       image: '',
