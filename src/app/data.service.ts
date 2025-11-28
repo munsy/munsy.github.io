@@ -15,15 +15,6 @@ export class DataService {
       description: 'Rift Blade is a 2.5D action roguelite that blends crisp melee with portal mechanics. Fight, craft, and tear open rifts to new arenas.',
       image: '',
       release: '2025-03-01',
-      tags: ['action', 'roguelite']
-    },
-    {
-      id: 'deck-and-dagger',
-      title: 'Deck and Dagger',
-      tagline: 'High-speed heists, neon streets.',
-      description: 'Neon Cartel is a stylized top-down racer/stealth hybrid where you assemble your crew and pull off synth-laced heists.',
-      image: '',
-      release: '2024-11-15',
       tags: ['racing', 'stealth']
     },
     {
@@ -33,7 +24,16 @@ export class DataService {
       description: 'Neon Cartel is a stylized top-down racer/stealth hybrid where you assemble your crew and pull off synth-laced heists.',
       image: '',
       release: '2024-11-15',
-      tags: ['racing', 'stealth']
+      tags: ['real-time strategy']
+    },
+    {
+      id: 'deck-and-dagger',
+      title: 'Deck and Dagger',
+      tagline: 'High-speed heists, neon streets.',
+      description: 'Neon Cartel is a stylized top-down racer/stealth hybrid where you assemble your crew and pull off synth-laced heists.',
+      image: '',
+      release: '2024-11-15',
+      tags: ['action', 'roguelite']
     }
   ]);
 
