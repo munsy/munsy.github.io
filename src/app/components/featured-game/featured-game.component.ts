@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { DataService } from '../../data.service';
 
 @Component({
-  selector: 'app-featured-game',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-featured-game',
+    imports: [CommonModule],
+    template: `
     <section class="featured">
       <div class="featured-inner">
         <div class="left">
@@ -33,7 +32,7 @@ import { DataService } from '../../data.service';
       </div>
     </section>
   `,
-  styles: [`
+    styles: [`
     .featured { background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:24px; border-radius:12px;}
     .featured-inner { display:flex; gap:18px; align-items:center; justify-content:space-between; }
     .left { flex:1; min-width:240px; }

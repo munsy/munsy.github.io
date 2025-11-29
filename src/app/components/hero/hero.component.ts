@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  template: `
+    selector: 'app-hero',
+    imports: [CommonModule, RouterLink],
+    template: `
     <div class="hero" style="display:flex;align-items:center;gap:36px;padding:48px 0;">
       <div style="flex:1;min-width:260px;">
         <h1 style="margin:0;font-size:42px;line-height:1.02;">Munsy Games</h1>
@@ -36,7 +35,7 @@ import { RouterLink } from '@angular/router';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .muted { color:var(--muted); font-size:16px;}
     @media (max-width:880px){
       .hero{flex-direction:column}

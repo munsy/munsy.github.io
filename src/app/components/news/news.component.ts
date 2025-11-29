@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { DataService } from '../../data.service';
 
 @Component({
-  selector: 'app-news',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-news',
+    imports: [CommonModule],
+    template: `
     <div class="container" style="padding:36px 24px;">
       <h2>News & Updates</h2>
       <p style="color:var(--muted);margin-top:6px;">Latest from Munsy Games</p>
@@ -24,7 +23,7 @@ import { DataService } from '../../data.service';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .news-card {
       padding:16px;
       background:var(--panel);

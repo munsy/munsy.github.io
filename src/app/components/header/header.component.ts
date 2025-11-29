@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  template: `
+    selector: 'app-header',
+    imports: [CommonModule, RouterLink],
+    template: `
     <header style="border-bottom:1px solid rgba(255,255,255,0.03);">
       <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:18px 0;">
         <a routerLink="/" class="brand row" style="gap:12px;align-items:center;">
@@ -25,7 +24,7 @@ import { RouterLink } from '@angular/router';
       </div>
     </header>
   `,
-  styles: [`
+    styles: [`
     .logo svg { width:48px; height:48px; display:block; }
     .nav-link { color:var(--muted); font-weight:600; }
     .nav-link:hover { color:var(--white); }

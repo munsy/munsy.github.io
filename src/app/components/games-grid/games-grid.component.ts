@@ -4,10 +4,9 @@ import { DataService } from '../../data.service';
 import type { Game } from '../../models';
 
 @Component({
-  selector: 'app-games-grid',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-games-grid',
+    imports: [CommonModule],
+    template: `
     <div>
       <h3 style="margin-top:0;">Our Games</h3>
       <p style="color:var(--muted);margin-top:6px;">Current & upcoming titles from Munsy Games</p>
@@ -41,7 +40,7 @@ import type { Game } from '../../models';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:12px; }
     .card { background:var(--panel); border-radius:12px; padding:12px; display:flex; flex-direction:column; gap:10px; min-height:200px; }
     .thumb { height:110px; border-radius:8px; overflow:hidden; background:linear-gradient(135deg,#2a2a2a,#111); display:flex; align-items:center; justify-content:center; color:var(--muted) }

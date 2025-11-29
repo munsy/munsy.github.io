@@ -7,17 +7,16 @@ import { GamesGridComponent } from './components/games-grid/games-grid.component
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    HeroComponent,
-    FeaturedGameComponent,
-    GamesGridComponent,
-    FooterComponent
-  ],
-  template: `
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        HeaderComponent,
+        HeroComponent,
+        FeaturedGameComponent,
+        GamesGridComponent,
+        FooterComponent
+    ],
+    template: `
     <div class="app-shell">
       <app-header></app-header>
 
@@ -42,7 +41,7 @@ import { FooterComponent } from './components/footer/footer.component';
       <app-footer></app-footer>
     </div>
   `,
-  styles: [`
+    styles: [`
     :host { display:block; }
   `]
 })
