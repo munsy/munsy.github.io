@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { FeaturedGameComponent } from './components/featured-game/featured-game.component';
@@ -10,13 +10,12 @@ import { FooterComponent } from './components/footer/footer.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
     HeaderComponent,
     HeroComponent,
     FeaturedGameComponent,
     GamesGridComponent,
     FooterComponent
-  ],
+],
   template: `
     <div class="app-shell">
       <app-header></app-header>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
     <footer style="border-top:1px solid rgba(255,255,255,0.03);padding:28px 0;margin-top:36px;">
       <div class="container" style="display:flex;justify-content:space-between;gap:12px;align-items:center;">
