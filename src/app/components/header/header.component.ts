@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-header',
-    imports: [CommonModule, RouterLink],
+    imports: [RouterLink],
     template: `
     <header style="border-bottom:1px solid rgba(255,255,255,0.03);">
       <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:18px 0;">

@@ -1,10 +1,10 @@
 import { Component, computed, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { DataService } from '../../data.service';
 
 @Component({
     selector: 'app-featured-game',
-    imports: [CommonModule],
+    imports: [],
     template: `
     <section class="featured">
       <div class="featured-inner">
@@ -12,13 +12,15 @@ import { DataService } from '../../data.service';
           <h2>{{ game().title }}</h2>
           <div class="tagline">{{ game().tagline }}</div>
           <p class="desc">{{ game().description }}</p>
-
+    
           <div style="margin-top:14px;">
             <span class="pill">Release: {{ game().release }}</span>
-            <span class="pill" *ngFor="let t of game().tags" style="margin-left:8px;">{{t}}</span>
+            @for (t of game().tags; track t) {
+              <span class="pill" style="margin-left:8px;">{{t}}</span>
+            }
           </div>
         </div>
-
+    
         <div class="right">
           <!-- placeholder art -->
           <div class="art">
@@ -31,7 +33,7 @@ import { DataService } from '../../data.service';
         </div>
       </div>
     </section>
-  `,
+    `,
     styles: [`
     .featured { background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:24px; border-radius:12px;}
     .featured-inner { display:flex; gap:18px; align-items:center; justify-content:space-between; }

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-hero',
-    imports: [CommonModule, RouterLink],
+    imports: [RouterLink],
     template: `
     <div class="hero" style="display:flex;align-items:center;gap:36px;padding:48px 0;">
       <div style="flex:1;min-width:260px;">

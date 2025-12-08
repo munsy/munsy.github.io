@@ -1,5 +1,22 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+/*
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly title = signal('munsy.github.io');
+}
+
+*/
+
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { FeaturedGameComponent } from './components/featured-game/featured-game.component';
@@ -9,13 +26,14 @@ import { FooterComponent } from './components/footer/footer.component';
 @Component({
     selector: 'app-root',
     imports: [
-        CommonModule,
-        HeaderComponent,
-        HeroComponent,
-        FeaturedGameComponent,
-        GamesGridComponent,
-        FooterComponent
-    ],
+	    RouterOutlet,
+
+	    HeaderComponent,
+	    HeroComponent,
+	    FeaturedGameComponent,
+	    GamesGridComponent,
+	    FooterComponent
+	],
     template: `
     <div class="app-shell">
       <app-header></app-header>
@@ -41,8 +59,14 @@ import { FooterComponent } from './components/footer/footer.component';
       <app-footer></app-footer>
     </div>
   `,
+  styleUrl: './app.css'
+/*
     styles: [`
     :host { display:block; }
   `]
+*/
 })
-export class AppComponent {}
+export class App {
+  protected readonly title = signal('munsy.github.io');
+}
+//export class AppComponent {}
