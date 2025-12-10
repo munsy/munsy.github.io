@@ -9,29 +9,29 @@ import type { Game, NewsItem } from './models';
 export class DataService {
   private _games = signal<Game[]>([
     {
-      id: 'the-play',
-      title: 'The Play',
-      tagline: 'Strategy beats spectacle.',
-      description: 'The Play is a tactical football game where formations matter more than spectacle, and every decision compounds across a season-like run. Build players, master plays, and outthink your opponent one drive at a time.',
-      image: '',
-      release: '2026-03-01',
-      tags: ['auto-battler', 'sports', 'roguelike']
-    },
-    {
       id: 'odyssey-of-eons',
       title: 'Odyssey of Eons',
       tagline: 'Some mistakes outlive everyone who made them.',
       description: 'When time shatters, no era remains innocent. Odyssey of Eons is a lore-driven RTS about fractured civilizations, permanent consequences, and the impossible weight of history.',
-      image: '',
+      image: '/assets/images/odyssey-of-eons.png',
       release: '2026-11-15',
       tags: ['real-time strategy']
+    },
+    {
+      id: 'the-play',
+      title: 'The Play',
+      tagline: 'Strategy beats spectacle.',
+      description: 'The Play is a tactical football game where formations matter more than spectacle, and every decision compounds across a season-like run. Build players, master plays, and outthink your opponent one drive at a time.',
+      image: '/assets/images/the-play.png',
+      release: '2026-03-01',
+      tags: ['auto-battler', 'sports', 'roguelike']
     },
     {
       id: 'deck-and-dagger',
       title: 'Deck and Dagger',
       tagline: 'High-speed heists, neon streets.',
       description: 'Neon Cartel is a stylized top-down racer/stealth hybrid where you assemble your crew and pull off synth-laced heists.',
-      image: '',
+      image: '/assets/images/deck-and-dagger.png',
       release: '2024-11-15',
       tags: ['action', 'roguelite']
     }

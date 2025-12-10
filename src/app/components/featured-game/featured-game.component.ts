@@ -24,7 +24,10 @@ import { DataService } from '../../data.service';
         <div class="right">
           <!-- placeholder art -->
           <div class="art">
-            <div class="art-inner">ART PREVIEW</div>
+            <div class="art-inner">
+              <!-- ART PREVIEW -->
+              <img [src]="game().image || '/assets/images/placeholder.png'" alt="game art">
+            </div>
           </div>
           <div style="margin-top:10px;">
             <button class="nav-cta">Download Demo</button>
